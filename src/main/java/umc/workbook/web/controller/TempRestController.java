@@ -1,6 +1,7 @@
 package umc.workbook.web.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.aspectj.apache.bcel.classfile.Code;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,7 +27,7 @@ public class TempRestController {
     }
 
     @GetMapping("/exception")
-    public ApiResponse<TempResponse.TempExceptionDTO> exceptionAPI(@RequestParam Integer flag) {
+    public ApiResponse<TempResponse.TempExceptionDTO> exceptionAPI(@RequestParam(name = "flag") Integer flag) {
         tempQueryService.CheckFlag(flag);
         return ApiResponse.onSuccess(TempConverter.toTempExceptionDTO(flag));
     }
