@@ -43,6 +43,7 @@ dependencies {
 
 	implementation 'org.springdoc:springdoc-openapi-ui'
 	implementation 'org.springdoc:springdoc-openapi-data-rest'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
 
 	// Querydsl 추가
 	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
