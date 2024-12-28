@@ -8,6 +8,7 @@ import umc.workbook.domain.common.BaseEntity;
 import umc.workbook.domain.enums.MissionStatus;
 
 @Entity
+@Setter
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
